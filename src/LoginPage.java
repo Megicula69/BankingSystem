@@ -3,9 +3,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
-
-import javax.naming.spi.DirStateFactory.Result;
-import javax.print.attribute.standard.JobHoldUntil;
 import javax.swing.JOptionPane;
 
 /*
@@ -249,32 +246,45 @@ public class LoginPage extends javax.swing.JFrame {
     }// GEN-LAST:event_passwordTextMouseClicked
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_submitButtonActionPerformed
+        // Check if the username text field is empty
         if (usernameText.getText().equals("Enter Username") || usernameText.getText().equals("")) {
             JOptionPane.showMessageDialog(null, "Please enter your username");
-        } else if (passwordText.getText().equals("Password") || passwordText.getText().equals("")) {
+        }
+        // Check if the password field is empty
+        else if (passwordText.getText().equals("Password") || passwordText.getText().equals("")) {
             JOptionPane.showMessageDialog(null, "Please enter your password");
-        } else {
+        }
+        // Connecting to database and checking username and password
+        else {
             try {
                 String username = usernameText.getText();
                 String password = passwordText.getText();
                 String queryLogin = "SELECT * FROM accountdetails WHERE Name = '" + username + "' AND Password = '"
                         + password + "'";
                 statement.executeQuery(queryLogin);
+                // Checking if the username and password is correct
                 try {
                     preparedStatement = connection.prepareStatement(queryLogin);
                     ResultSet result = preparedStatement.executeQuery();
+                    // If the username and password is incorrect
                     if (!result.next()) {
                         JOptionPane.showMessageDialog(null, "Invalid username or password");
-                    } else {
-                        HomePage homePage = new HomePage();
+                    }
+                    // If the username and password is correct
+                    else {
+                        HomePage homePage = new HomePage(username);
                         homePage.setVisible(true);
                         homePage.pack();
                         this.dispose();
                     }
-                } catch (Exception e) {
+                }
+                // Catching any exceptions
+                catch (Exception e) {
                     System.out.println(e);
                 }
-            } catch (Exception e) {
+            }
+            // Catching any exceptions
+            catch (Exception e) {
                 JOptionPane.showMessageDialog(null, "Invalid username or password");
                 System.out.println(e);
             }

@@ -1,9 +1,14 @@
 import java.sql.Connection;
 import java.sql.Statement;
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 import javax.swing.JOptionPane;
 
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.time.format.DateTimeFormatter;
 
 public class RegisterPage extends javax.swing.JFrame {
         public RegisterPage() {
@@ -31,6 +36,25 @@ public class RegisterPage extends javax.swing.JFrame {
                         statement = connection.createStatement();
                         if (connection != null) {
                                 System.out.println("Connected to the database");
+                        }
+                } catch (Exception e) {
+                        System.out.println(e);
+                }
+        }
+
+        public void Transaction(String name, String transactionType) {
+                try {
+                        String queryInsert = "INSERT INTO accounttransactionhistory (name, date, time, type) VALUES (?, ?, ?, ?)";
+                        PreparedStatement preparedStatement = connection.prepareStatement(queryInsert);
+
+                        preparedStatement.setString(1, name);
+                        preparedStatement.setDate(2, java.sql.Date.valueOf(LocalDate.now()));
+                        preparedStatement.setTime(3, java.sql.Time.valueOf(LocalTime.now()));
+                        preparedStatement.setString(4, transactionType);
+
+                        int rowsInserted = preparedStatement.executeUpdate();
+                        if (rowsInserted > 0) {
+                                System.out.println("A new transaction was inserted successfully!");
                         }
                 } catch (Exception e) {
                         System.out.println(e);
@@ -289,16 +313,22 @@ public class RegisterPage extends javax.swing.JFrame {
 
         private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_submitButtonActionPerformed
                 String username, password;
+                // Check if username text field is empty
                 if (usernameText.getText().equals("Enter Username") || usernameText.getText().equals("")) {
                         JOptionPane.showMessageDialog(null, "Username cannot be empty");
-                } else if (passwordText.getText().equals("Password") || passwordText.getText().equals("")) {
+                }
+                // Check if password text field is empty
+                else if (passwordText.getText().equals("Password") || passwordText.getText().equals("")) {
                         JOptionPane.showMessageDialog(null, "Password cannot be empty");
-                } else if (passwordText.getText().length() < 4) {
-                        JOptionPane.showMessageDialog(null, "Password must be atleast 4 characters long");
-                } else {
+                }
+                // Check if password is less than 4 characters
+                else if (passwordText.getText().length() < 4) {
+                        JOptionPane.showMessageDialog(null, "Password must be at least 4 characters long");
+                }
+                // Connect to database and insert the username and password
+                else {
                         username = usernameText.getText();
                         password = passwordText.getText();
-
                         try {
                                 String queryRegister = "INSERT into accountdetails(Name, Password)"
                                                 + "VALUES ('" + username + "','" + password + "')";
@@ -306,9 +336,14 @@ public class RegisterPage extends javax.swing.JFrame {
                                 JOptionPane.showMessageDialog(null, "Registration Successful");
                                 usernameText.setText("Enter Username");
                                 passwordText.setText("Password");
-                        } catch (java.sql.SQLIntegrityConstraintViolationException e) {
+                                Transaction(username, "Registration");
+                        }
+                        // Catch exception if username already exists
+                        catch (java.sql.SQLIntegrityConstraintViolationException e) {
                                 JOptionPane.showMessageDialog(null, "Username already exists");
-                        } catch (Exception e) {
+                        }
+                        // Catch exception if any other error occurs
+                        catch (Exception e) {
                                 System.out.println(e);
                         }
                 }
