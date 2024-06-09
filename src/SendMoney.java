@@ -143,30 +143,32 @@ public class SendMoney extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         amountText = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        time = new javax.swing.JLabel();
-        date = new javax.swing.JLabel();
         sendMoneyButton = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
-        nameText = new javax.swing.JTextField();
         exitButton = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        date = new javax.swing.JLabel();
+        time = new javax.swing.JLabel();
+        nameText = new javax.swing.JTextField();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
-        jPanel2.setBackground(new java.awt.Color(249, 115, 0));
-
         jPanel3.setBackground(new java.awt.Color(50, 1, 47));
+        jPanel3.setLayout(null);
 
         amountText.setBackground(new java.awt.Color(255, 255, 255));
-        amountText.setFont(new java.awt.Font("Inter Medium", 0, 48)); // NOI18N
+        amountText.setFont(new java.awt.Font("Inter Medium", 0, 24)); // NOI18N
         amountText.setForeground(new java.awt.Color(50, 1, 47));
         amountText.setText("00.00");
         amountText.setBorder(javax.swing.BorderFactory.createEmptyBorder(15, 15, 15, 15));
@@ -175,24 +177,8 @@ public class SendMoney extends javax.swing.JFrame {
                 amountTextMouseClicked(evt);
             }
         });
-
-        jLabel2.setFont(new java.awt.Font("Inter Medium", 0, 48)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("PHP");
-
-        jLabel4.setFont(new java.awt.Font("Inter Medium", 0, 24)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Account Name");
-
-        time.setBackground(new java.awt.Color(255, 255, 255));
-        time.setFont(new java.awt.Font("Inter Medium", 0, 18)); // NOI18N
-        time.setForeground(new java.awt.Color(255, 255, 255));
-        time.setText("12:00AM");
-
-        date.setBackground(new java.awt.Color(255, 255, 255));
-        date.setFont(new java.awt.Font("Inter Medium", 0, 18)); // NOI18N
-        date.setForeground(new java.awt.Color(255, 255, 255));
-        date.setText("April 18, 2005");
+        jPanel3.add(amountText);
+        amountText.setBounds(380, 200, 220, 50);
 
         sendMoneyButton.setBackground(new java.awt.Color(255, 255, 255));
         sendMoneyButton.setFont(new java.awt.Font("Inter Medium", 0, 18)); // NOI18N
@@ -204,13 +190,66 @@ public class SendMoney extends javax.swing.JFrame {
                 sendMoneyButtonActionPerformed(evt);
             }
         });
+        jPanel3.add(sendMoneyButton);
+        sendMoneyButton.setBounds(320, 300, 100, 30);
+
+        exitButton.setBackground(new java.awt.Color(255, 255, 255));
+        exitButton.setFont(new java.awt.Font("Inter Medium", 1, 14)); // NOI18N
+        exitButton.setForeground(new java.awt.Color(50, 1, 47));
+        exitButton.setText("EXIT");
+        exitButton.setBorderPainted(false);
+        exitButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitButtonActionPerformed(evt);
+            }
+        });
+        jPanel3.add(exitButton);
+        exitButton.setBounds(600, 350, 70, 20);
 
         jLabel5.setFont(new java.awt.Font("Inter Medium", 0, 24)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Enter Amount");
+        jPanel3.add(jLabel5);
+        jLabel5.setBounds(130, 210, 148, 32);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\PLPASIG\\Music\\IMG\\bank transfer.png")); // NOI18N
+        jPanel3.add(jLabel1);
+        jLabel1.setBounds(30, 30, 100, 97);
+
+        jLabel4.setFont(new java.awt.Font("Inter Medium", 0, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setText("Account Name");
+        jPanel3.add(jLabel4);
+        jLabel4.setBounds(130, 150, 157, 32);
+
+        jLabel2.setFont(new java.awt.Font("Inter Medium", 0, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("PHP");
+        jPanel3.add(jLabel2);
+        jLabel2.setBounds(320, 190, 60, 62);
+
+        jLabel3.setFont(new java.awt.Font("Lucida Fax", 1, 36)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("BANK TRANSFER");
+        jPanel3.add(jLabel3);
+        jLabel3.setBounds(140, 50, 315, 43);
+
+        date.setBackground(new java.awt.Color(255, 255, 255));
+        date.setFont(new java.awt.Font("Inter Medium", 2, 14)); // NOI18N
+        date.setForeground(new java.awt.Color(0, 0, 0));
+        date.setText("April 18, 2005");
+        jPanel3.add(date);
+        date.setBounds(580, 20, 100, 24);
+
+        time.setBackground(new java.awt.Color(255, 255, 255));
+        time.setFont(new java.awt.Font("Inter Medium", 2, 14)); // NOI18N
+        time.setForeground(new java.awt.Color(0, 0, 0));
+        time.setText("12:00AM");
+        jPanel3.add(time);
+        time.setBounds(610, 50, 70, 19);
 
         nameText.setBackground(new java.awt.Color(255, 255, 255));
-        nameText.setFont(new java.awt.Font("Inter Medium", 0, 48)); // NOI18N
+        nameText.setFont(new java.awt.Font("Inter Medium", 0, 24)); // NOI18N
         nameText.setForeground(new java.awt.Color(50, 1, 47));
         nameText.setText("Enter Name");
         nameText.setBorder(javax.swing.BorderFactory.createEmptyBorder(15, 15, 15, 15));
@@ -224,133 +263,42 @@ public class SendMoney extends javax.swing.JFrame {
                 nameTextActionPerformed(evt);
             }
         });
+        jPanel3.add(nameText);
+        nameText.setBounds(320, 130, 280, 50);
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-                jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout
-                                                .createSequentialGroup()
-                                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addGroup(jPanel3Layout
-                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(time, javax.swing.GroupLayout.Alignment.TRAILING)
-                                                        .addComponent(date,
-                                                                javax.swing.GroupLayout.Alignment.TRAILING)))
-                                        .addGroup(jPanel3Layout.createSequentialGroup()
-                                                .addGap(18, 18, 18)
-                                                .addGroup(jPanel3Layout
-                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                        .addGroup(jPanel3Layout
-                                                                .createParallelGroup(
-                                                                        javax.swing.GroupLayout.Alignment.LEADING)
-                                                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
-                                                                        jPanel3Layout.createSequentialGroup()
-                                                                                .addPreferredGap(
-                                                                                        javax.swing.LayoutStyle.ComponentPlacement.RELATED,
-                                                                                        247,
-                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                .addComponent(sendMoneyButton,
-                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                        129,
-                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                                .addGroup(jPanel3Layout.createSequentialGroup()
-                                                                        .addComponent(jLabel2)
-                                                                        .addPreferredGap(
-                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                        .addComponent(amountText,
-                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                273,
-                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                                        .addGroup(jPanel3Layout
-                                                                .createParallelGroup(
-                                                                        javax.swing.GroupLayout.Alignment.LEADING)
-                                                                .addGroup(jPanel3Layout.createParallelGroup(
-                                                                        javax.swing.GroupLayout.Alignment.LEADING)
-                                                                        .addComponent(jLabel5,
-                                                                                javax.swing.GroupLayout.Alignment.TRAILING)
-                                                                        .addComponent(jLabel4,
-                                                                                javax.swing.GroupLayout.Alignment.TRAILING))
-                                                                .addGroup(jPanel3Layout.createSequentialGroup()
-                                                                        .addGap(12, 12, 12)
-                                                                        .addComponent(nameText,
-                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                352,
-                                                                                javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                                .addGap(0, 0, Short.MAX_VALUE)))
-                                .addContainerGap(40, Short.MAX_VALUE)));
-        jPanel3Layout.setVerticalGroup(
-                jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGap(36, 36, 36)
-                                .addComponent(date)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(time)
-                                .addGap(4, 4, 4)
-                                .addComponent(jLabel4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nameText, javax.swing.GroupLayout.PREFERRED_SIZE, 68,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel5)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(amountText, javax.swing.GroupLayout.PREFERRED_SIZE, 68,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel2))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(sendMoneyButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(34, Short.MAX_VALUE)));
-
-        exitButton.setBackground(new java.awt.Color(255, 255, 255));
-        exitButton.setFont(new java.awt.Font("Inter Medium", 0, 18)); // NOI18N
-        exitButton.setForeground(new java.awt.Color(50, 1, 47));
-        exitButton.setText("EXIT");
-        exitButton.setBorderPainted(false);
-        exitButton.addActionListener(new java.awt.event.ActionListener() {
+        jCheckBox1.setFont(new java.awt.Font("Arial", 2, 12)); // NOI18N
+        jCheckBox1.setForeground(new java.awt.Color(0, 0, 0));
+        jCheckBox1.setText(" Please note that a 2% service charge will be applied to the total amount being transferred.");
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                exitButtonActionPerformed(evt);
+                jCheckBox1ActionPerformed(evt);
             }
         });
+        jPanel3.add(jCheckBox1);
+        jCheckBox1.setBounds(120, 260, 500, 40);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-                jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(exitButton, javax.swing.GroupLayout.DEFAULT_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addContainerGap()));
-        jPanel2Layout.setVerticalGroup(
-                jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(exitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 41,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE,
-                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
+        jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\PLPASIG\\Music\\IMG\\trans bg.png")); // NOI18N
+        jPanel3.add(jLabel6);
+        jLabel6.setBounds(20, 20, 660, 360);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE));
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
+        );
         layout.setVerticalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE,
-                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 401, Short.MAX_VALUE)
+        );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
 
     private void nameTextActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_nameTextActionPerformed
         // TODO add your handling code here:
@@ -432,10 +380,13 @@ public class SendMoney extends javax.swing.JFrame {
     private javax.swing.JTextField amountText;
     private javax.swing.JLabel date;
     private javax.swing.JButton exitButton;
+    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JTextField nameText;
     private javax.swing.JButton sendMoneyButton;
