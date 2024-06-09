@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.DriverManager;
@@ -10,7 +12,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import javax.swing.Timer;
 
 import javax.swing.table.DefaultTableModel;
 
@@ -33,6 +38,7 @@ public class TransactionHistory extends javax.swing.JFrame {
         } catch (Exception e) {
             System.out.println(e);
         }
+        updateDateandTime();
         addTable();
     }
 
@@ -43,6 +49,7 @@ public class TransactionHistory extends javax.swing.JFrame {
         } catch (Exception e) {
             System.out.println(e);
         }
+        updateDateandTime();
         addTable();
     }
 
@@ -68,6 +75,23 @@ public class TransactionHistory extends javax.swing.JFrame {
             System.out.println(e);
         }
     }
+    
+    public void updateDateandTime() {
+        DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("MMMM dd, yyyy");
+        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("hh:mm a");
+
+        Timer timer = new Timer(1, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                LocalDate currentDate = LocalDate.now();
+                LocalTime currentTime = LocalTime.now();
+
+                date1.setText(currentDate.format(dateFormatter));
+                time1.setText(currentTime.format(timeFormatter).toUpperCase());
+            }
+        });
+        timer.start();
+    }
 
     public void addTable() {
         String query = "SELECT * FROM accounttransactionhistory WHERE name = ?";
@@ -82,12 +106,12 @@ public class TransactionHistory extends javax.swing.JFrame {
             int rowCount = 0;
             while (resultSet.next()) {
                 rowCount++;
-                String date = resultSet.getString("date");
-                String time = resultSet.getString("time");
+                String dateDb = resultSet.getString("date");
+                String timeDb = resultSet.getString("time");
                 String type = resultSet.getString("type");
                 String amount = resultSet.getString("amount");
 
-                model.addRow(new Object[] { date, time,
+                model.addRow(new Object[] { dateDb, timeDb,
                         type, amount });
             }
             System.out.println("Total rows retrieved: " + rowCount);
