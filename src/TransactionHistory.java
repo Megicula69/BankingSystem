@@ -75,7 +75,7 @@ public class TransactionHistory extends javax.swing.JFrame {
             System.out.println(e);
         }
     }
-    
+
     public void updateDateandTime() {
         DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("MMMM dd, yyyy");
         DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("hh:mm a");
@@ -129,6 +129,7 @@ public class TransactionHistory extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
     // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -140,6 +141,8 @@ public class TransactionHistory extends javax.swing.JFrame {
         time = new javax.swing.JLabel();
         date = new javax.swing.JLabel();
         withdrawButton = new javax.swing.JButton();
+        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0),
+                new java.awt.Dimension(0, 32767));
         jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         usernameText = new javax.swing.JLabel();
@@ -232,6 +235,7 @@ public class TransactionHistory extends javax.swing.JFrame {
                                 javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jPanel4.setBackground(new java.awt.Color(249, 115, 0));
         jPanel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -450,6 +454,7 @@ public class TransactionHistory extends javax.swing.JFrame {
     private javax.swing.JButton backButton;
     private javax.swing.JLabel date;
     private javax.swing.JLabel date1;
+    private javax.swing.Box.Filler filler1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
