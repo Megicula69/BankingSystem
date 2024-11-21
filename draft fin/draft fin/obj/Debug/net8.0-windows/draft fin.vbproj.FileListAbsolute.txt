@@ -1,0 +1,18 @@
+C:\Users\PLPASIG\source\repos\draft fin\draft fin\bin\Debug\net8.0-windows\draft fin.exe
+C:\Users\PLPASIG\source\repos\draft fin\draft fin\bin\Debug\net8.0-windows\draft fin.deps.json
+C:\Users\PLPASIG\source\repos\draft fin\draft fin\bin\Debug\net8.0-windows\draft fin.runtimeconfig.json
+C:\Users\PLPASIG\source\repos\draft fin\draft fin\bin\Debug\net8.0-windows\draft fin.dll
+C:\Users\PLPASIG\source\repos\draft fin\draft fin\bin\Debug\net8.0-windows\draft fin.pdb
+C:\Users\PLPASIG\source\repos\draft fin\draft fin\obj\Debug\net8.0-windows\draft_fin.Form1.resources
+C:\Users\PLPASIG\source\repos\draft fin\draft fin\obj\Debug\net8.0-windows\draft fin.vbproj.GenerateResource.cache
+C:\Users\PLPASIG\source\repos\draft fin\draft fin\obj\Debug\net8.0-windows\draft fin.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PLPASIG\source\repos\draft fin\draft fin\obj\Debug\net8.0-windows\draft fin.AssemblyInfoInputs.cache
+C:\Users\PLPASIG\source\repos\draft fin\draft fin\obj\Debug\net8.0-windows\draft fin.AssemblyInfo.vb
+C:\Users\PLPASIG\source\repos\draft fin\draft fin\obj\Debug\net8.0-windows\draft fin.vbproj.CoreCompileInputs.cache
+C:\Users\PLPASIG\source\repos\draft fin\draft fin\obj\Debug\net8.0-windows\draft fin.dll
+C:\Users\PLPASIG\source\repos\draft fin\draft fin\obj\Debug\net8.0-windows\refint\draft fin.dll
+C:\Users\PLPASIG\source\repos\draft fin\draft fin\obj\Debug\net8.0-windows\draft fin.pdb
+C:\Users\PLPASIG\source\repos\draft fin\draft fin\obj\Debug\net8.0-windows\draft fin.genruntimeconfig.cache
+C:\Users\PLPASIG\source\repos\draft fin\draft fin\obj\Debug\net8.0-windows\ref\draft fin.dll
+C:\Users\PLPASIG\source\repos\draft fin\draft fin\obj\Debug\net8.0-windows\draft_fin.Resources.resources
+C:\Users\PLPASIG\source\repos\draft fin\draft fin\obj\Debug\net8.0-windows\draft_fin.Form2.resources
